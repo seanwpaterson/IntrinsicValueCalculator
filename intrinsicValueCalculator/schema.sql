@@ -16,9 +16,8 @@
 
   CREATE TABLE report (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    ticker VARCHAR(8) FOREIGN KEY,
+    ticker VARCHAR(8) NOT NULL,
     cash_from_operations INTEGER NOT NULL,
-    revenue INTEGER NOT NULL,
     capex INTEGER NOT NULL,
     fcf INTEGER NOT NULL,
     revenue INTEGER NOT NULL,
@@ -29,11 +28,13 @@
     short_term_investments INTEGER NOT NULL,
     short_long_term_debt INTEGER NOT NULL,
     long_term_debt INTEGER NOT NULL,
-    net_borrowings INTEGER NOT NULL
+    net_borrowings INTEGER NOT NULL,
+    FOREIGN KEY (ticker) REFERENCES company (ticker)
   );
 
   CREATE TABLE projection (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    ticker VARCHAR(8) FOREIGN KEY,
-    revenue INTEGER NOT NULL
+    ticker VARCHAR(8) NOT NULL,
+    revenue INTEGER NOT NULL,
+    FOREIGN KEY (ticker) REFERENCES company (ticker)
   );
