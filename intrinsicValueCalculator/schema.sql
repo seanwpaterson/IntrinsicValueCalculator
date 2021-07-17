@@ -21,6 +21,7 @@
   CREATE TABLE report (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     ticker VARCHAR(8) NOT NULL,
+    publish_date DATE NOT NULL,
     cash_from_operations INTEGER NOT NULL,
     capex INTEGER NOT NULL,
     fcf INTEGER NOT NULL,
