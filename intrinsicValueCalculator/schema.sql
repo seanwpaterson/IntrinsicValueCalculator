@@ -41,5 +41,7 @@
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     ticker VARCHAR(8) NOT NULL,
     revenue INTEGER NOT NULL,
+    net_income INTEGER NOT NULL,
+    fcf INTEGER NOT NULL,
     FOREIGN KEY (ticker) REFERENCES company (ticker)
   );
