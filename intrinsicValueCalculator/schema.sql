@@ -10,6 +10,8 @@
     share_outstanding INTEGER NOT NULL,
     market_cap INTEGER,
     beta FLOAT(4,2) NOT NULL,
+    risk_free_rate FLOAT(7,6) NOT NULL
+    capm FLOAT(7,6) NOT NULL
     net_profit_margin FLOAT(6,2) NOT NULL,
     net_income_to_fcf FLOAT(6,2) NOT NULL,
     fair_value FLOAT(9,2)
